@@ -5,11 +5,13 @@ Record one item's start and finish time
 ## Usage
 1.  Add started_at and finished_at datetime column to the table.
 2.  Now here you go.
+
 ```ruby
 class LearnIssue < ActiveRecord::Base
   include ActsAsTimeRacing
 end
 ```
+
 ```text
 1.9.3-p392 :001 > issue = LearnIssue.find(7)
   LearnIssue Load (0.5ms)  SELECT `learn_issue`.* FROM `learn_issue` WHERE `learn_issue`.`id` = 7 AND (`learn_issue`.`is_delete` = 0) LIMIT 1
